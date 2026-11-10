@@ -1,0 +1,241 @@
+﻿@model buddy.AI.Analysis.Dto.ClientAIAnalysisResultDto
+@using buddy.Clinics.Dtos
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "AI Diagnosis Result";
+
+    /* use the list we stuffed into ViewBag in the controller */
+    var clinics = ViewBag.AllClinics as List<ClinicWithVeterinarianDto>;
+}
+
+<style>
+    .hover-scale {
+        transition: transform .15s
+    }
+
+    .hover-scale:hover {
+        transform: translateY(-4px) scale(1.02)
+    }
+</style>
+
+<form asp-action="Confirm" method="post">
+    <!-- keep analysis info in the POST -->
+    <input type="hidden" asp-for="PetId" />
+    <input type="hidden" asp-for="Prompt" />
+    <input type="hidden" asp-for="Duration" />
+    <input type="hidden" asp-for="PetType" />
+    <input type="hidden" asp-for="Comments" />
+
+    @for (var i = 0; i < Model.ImageBytesList.Count; i++)
+    {
+        <input type="hidden" name="ImageBytesList[@i]" value="@Convert.ToBase64String(Model.ImageBytesList[i])" />
+        <input type="hidden" name="MimeTypes[@i]" value="@Model.MimeTypes[i]" />
+    }
+    @for (var i = 0; i < Model.PossibleCauses.Count; i++)
+    {
+        <input type="hidden" name="PossibleCauses[@i]" value="@Model.PossibleCauses[i]" />
+    }
+    @for (var i = 0; i < Model.Recommendations.Count; i++)
+    {
+        <input type="hidden" name="Recommendations[@i]" value="@Model.Recommendations[i]" />
+    }
+    @for (var i = 0; i < Model.WhatToTellYourVet.Count; i++)
+    {
+        <input type="hidden" name="WhatToTellYourVet[@i]" value="@Model.WhatToTellYourVet[i]" />
+    }
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <label class="form-label">Clinic *</label>
+            <select class="form-select" asp-for="ClinicId" required>
+                <option value="">-- choose --</option>
+                @foreach (var c in clinics)
+                {
+                    <option value="@c.Id">@c.Name</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Veterinarian (optional)</label>
+            <select class="form-select" asp-for="VetUserId">
+                <option value="">-- choose --</option>
+                @foreach (var c in clinics)
+                {
+                    foreach (var v in c.Veterinarians)
+                    {
+                        <option value="@v.UserId" data-clinic="@c.Id">
+                            @v.FullName (@c.Name)
+                        </option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary px-4">Save &amp; Book</button>
+    <a asp-action="Create" class="btn btn-outline-secondary px-4 ms-2">Cancel</a>
+</form>
+
+
+
+<div class="container py-5">
+
+    <!-- ============ TITLE ============================================= -->
+    <h2 class="text-center fw-bold mb-5">
+        <i class="bi bi-heart-pulse-fill text-danger"></i> AI Diagnosis Result
+    </h2>
+
+    <!-- ============ SUBMISSION SUMMARY ================================ -->
+    <div class="card border-0 shadow-sm rounded-4 mb-5">
+        <div class="card-header bg-primary text-white rounded-top-4">
+            <h5 class="mb-0"><i class="bi bi-info-circle"></i> Submission Summary</h5>
+        </div>
+        <div class="card-body fs-6">
+            <p><strong>Symptoms:</strong> @Model.Prompt</p>
+            <p><strong>Duration:</strong> @Model.Duration</p>
+            <p><strong>Pet Type:</strong> @Model.PetType</p>
+            <p><strong>Comments:</strong> @Model.Comments</p>
+
+            @if (Model.ImageBytesList?.Any() == true)
+            {
+                <hr />
+                <div class="row g-3">
+                    @for (var i = 0; i < Model.ImageBytesList.Count; i++)
+                    {
+                        <div class="col-md-4 col-sm-6">
+                            <img class="img-fluid rounded-3 shadow-sm"
+                                 src="data:@Model.MimeTypes[i];base64,@Convert.ToBase64String(Model.ImageBytesList[i])"
+                                 alt="upload@(i+1)" />
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- ============ AI OUTPUT ======================================== -->
+    <div class="row g-4 mb-5">
+        <!-- Possible Causes -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-header bg-info text-white rounded-top-4">
+                    <h6 class="mb-0">Possible Causes</h6>
+                </div>
+                <div class="card-body">
+                    @if (Model.PossibleCauses.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var c in Model.PossibleCauses)
+                            {
+                                <li class="list-group-item">@c</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-muted mb-0">No causes provided.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-header bg-info text-white rounded-top-4">
+                    <h6 class="mb-0">Recommendations</h6>
+                </div>
+                <div class="card-body">
+                    @if (Model.Recommendations.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var rec in Model.Recommendations)
+                            {
+                                <li class="list-group-item">@rec</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-muted mb-0">No recommendations provided.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Tell Vet -->
+        <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-header bg-info text-white rounded-top-4">
+                    <h6 class="mb-0">What to Tell Your Veterinarian</h6>
+                </div>
+                <div class="card-body">
+                    @if (Model.WhatToTellYourVet.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var t in Model.WhatToTellYourVet)
+                            {
+                                <li class="list-group-item">@t</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-muted mb-0">No suggestions provided.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ CLINIC / VET SUGGESTIONS ========================= -->
+    @if (clinics.Any())
+    {
+        <h3 class="fw-semibold mb-4">Suggested Clinics &amp; Veterinarians</h3>
+        <div class="row g-4 mb-5">
+            @foreach (var c in clinics)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 hover-scale">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-primary mb-1">@c.Name</h5>
+                            <p class="text-muted small mb-2">
+                                <i class="bi bi-geo-alt-fill"></i> @c.Address
+                            </p>
+                            <h6 class="text-secondary fw-semibold mt-3 mb-2">Veterinarians</h6>
+                            @if (c.Veterinarians.Any())
+                            {
+                                <ul class="list-unstyled mb-0 small">
+                                    @foreach (var v in c.Veterinarians)
+                                    {
+                                        <li><i class="bi bi-person-circle"></i> @v.FullName</li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p class="small text-muted mb-0">No veterinarians listed.</p>
+                            }
+                        </div>
+                        <div class="card-footer bg-white border-0 text-end">
+                            <a asp-controller="ClientAppointments"
+                               asp-action="Create"
+                               asp-route-clinicId="@c.Id"
+                               class="btn btn-outline-primary btn-sm">
+                                Book Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- ============ FOOTER ACTIONS ==================================== -->
+    <div class="text-center">
+        <a asp-action="Create" class="btn btn-success px-4 me-2"><i class="bi bi-plus-circle"></i> New Analysis</a>
+        <a asp-action="MyAnalysisResults" class="btn btn-outline-secondary px-4 me-2"><i class="bi bi-clock-history"></i> Past Analyses</a>
+        <a asp-controller="ClientAppointments" asp-action="Create"
+           class="btn btn-primary px-4"><i class="bi bi-calendar-plus"></i> Book Appointment</a>
+    </div>
+</div>

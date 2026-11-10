@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "AI Analysis Home";
+}
+
+<div class="page-title">
+    <div class="title-wrapper">
+        <h1>AI Diagnosis</h1>
+        <p>Empower yourself with insights into your pet’s health using our advanced AI technology.</p>
+    </div>
+</div>
+
+<section class="light-background py-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <span class="section-badge"><i class="bi bi-info-circle"></i> About AI Diagnosis</span>
+        <div class="row mt-4">
+            <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="200">
+                <div class="image-box d-flex justify-content-center align-items-center">
+                    <img src="~/assets/img/www1.jpeg" class="img-fluid" alt="Pet health analysis" style="max-width: 100%; height: auto; border-radius: 15px;" />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <h2 class="about-title">What is AI Diagnosis?</h2>
+                <p class="about-description">
+                    Our AI Diagnosis tool helps pet owners stay informed about potential health issues in their cats and dogs. By uploading a clear image of your pet and describing any symptoms or concerns, the AI analyzes the data to suggest possible diagnoses.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="about-text">
+                    Using advanced AI technology, the tool provides fast and reliable health insights, making it easier to recognize signs of illness, from skin conditions to behavioral changes. It’s designed to increase your awareness and confidence in managing your pet’s health.
+                </p>
+                <p class="about-text">
+                    The AI Diagnosis tool also supports collaboration with veterinarians, allowing you to share insights for professional advice, ensuring your pet receives timely and effective care.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a asp-action="Create" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">Start New Analysis</a>
+            <a asp-action="MyAnalysisResults" class="btn btn-outline-secondary btn-lg rounded-pill shadow-sm ms-2">Past Analyses</a>
+        </div>
+    </div>
+</section>

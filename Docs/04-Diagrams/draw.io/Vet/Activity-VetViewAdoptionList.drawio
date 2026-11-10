@@ -1,0 +1,74 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="jDjmCE2LE7EqgsOTcJH9">
+    <mxGraphModel dx="757" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="umT-CIfe0hARdCITbU1V-1" value="Vet" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="690" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-2" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="10" y="45" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-2" target="umT-CIfe0hARdCITbU1V-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="80" as="targetPoint" />
+            <mxPoint x="40.000000000000114" y="59.999999999999886" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-4" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="70" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-5" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-4" target="umT-CIfe0hARdCITbU1V-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-6" value="View Dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="230" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-7" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-6" target="umT-CIfe0hARdCITbU1V-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-8" value="Click on Menu" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="400" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-8" target="umT-CIfe0hARdCITbU1V-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-10" value="Click on Adoption" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="550" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-11" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-10" target="umT-CIfe0hARdCITbU1V-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130.5" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-12" value="Click on Adoption Pool" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="550" y="98" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-13" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-12" target="umT-CIfe0hARdCITbU1V-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-14" value="View Adoption List" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="400" y="98" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-15" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="umT-CIfe0hARdCITbU1V-1" vertex="1">
+          <mxGeometry x="330" y="103" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="umT-CIfe0hARdCITbU1V-16" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="umT-CIfe0hARdCITbU1V-1" source="umT-CIfe0hARdCITbU1V-14" target="umT-CIfe0hARdCITbU1V-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="138" as="targetPoint" />
+            <mxPoint x="240" y="138" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

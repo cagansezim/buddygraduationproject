@@ -1,0 +1,76 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Image Classification";
+    ViewBag.CurrentPageName = "ImageClassification"; // Adjust based on your page names
+}
+
+@section styles {
+    <style>
+        .card-icon {
+            font-size: 2.5rem;
+            color: #f5a104;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+    </style>
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">Cat or Dog Image Classification</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-info alert-dismissible alert-custom">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h6><i class="icon fa fa-info"></i> Upload an image or classify all images in the directory to identify cats and dogs using AI.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Classify Directory Images Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Classify Images in Directory</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <i class="fas fa-folder-open card-icon mb-3"></i>
+                        <p>Classify all images in the directory: <strong>@ViewBag.ImageDirectory</strong></p>
+                        <a asp-action="ClassifyImagesInDirectory" class="btn btn-primary btn-custom">Classify Directory Images</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Single Image Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Upload and Classify a Single Image</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <i class="fas fa-upload card-icon mb-3"></i>
+                        <form asp-action="UploadAndClassify" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="Image">Select an image:</label>
+                                <input type="file" name="Image" accept="image/*" class="form-control" required />
+                            </div>
+                            <button type="submit" class="btn btn-success btn-custom">Classify Image</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

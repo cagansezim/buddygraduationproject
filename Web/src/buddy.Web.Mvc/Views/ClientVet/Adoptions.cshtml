@@ -1,0 +1,279 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+    ViewBag.Title = "Adoptions";
+    ViewBag.BodyClass = "adoptions-page";
+}
+<div class="page-title position-relative">
+    <div class="title-wrapper">
+        <h1>Adoptions</h1>
+        <p>Find your perfect cat or dog companion with Buddy's adoption pool.</p>
+    </div>
+</div><!-- End Page Title -->
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-4 sidebar">
+            <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="filter-widget widget-item">
+                    <h3 class="widget-title">Filter Pets</h3>
+                    <button class="btn" style="background-color: var(--accent-color); color: var(--contrast-color); border-radius: 50px; padding: 10px 20px;" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+                        Show Filters
+                    </button>
+                    <div class="collapse mt-3" id="filterCollapse">
+                        <div style="background-color: var(--surface-color); padding: 15px; border-radius: 5px; border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);">
+                            <div class="mb-2">
+                                <label><input type="checkbox" name="sex" value="male"> Male</label><br>
+                                <label><input type="checkbox" name="sex" value="female"> Female</label>
+                            </div>
+                            <div class="mb-2">
+                                <label><input type="checkbox" name="species" value="cat"> Cat</label><br>
+                                <label><input type="checkbox" name="species" value="dog"> Dog</label>
+                            </div>
+                            <div class="mb-2">
+                                <label>Age Gap: <input type="range" min="0" max="20" value="5"></label>
+                            </div>
+                            <div class="mb-2">
+                                <label>Race: <input type="text" placeholder="e.g., Siamese" style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);"></label>
+                            </div>
+                            <div class="mb-2">
+                                <label>Height Gap: <input type="range" min="0" max="100" value="50"></label>
+                            </div>
+                            <div>
+                                <label>Weight Gap: <input type="range" min="0" max="50" value="25"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-posts-widget widget-item">
+                    <h3 class="widget-title">Recent Adoptions</h3>
+                    <div class="post-item">
+                        <img src="~/assets/img/fluffy-cat.webp" alt="" class="flex-shrink-0">
+                        <div>
+                            <h4><a href="@Url.Action("BlogDetails")">Fluffy the Cat</a></h4>
+                            <time datetime="2025-03-01">Mar 1, 2025</time>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <img src="~/assets/img/bernese-mountain-dog.avif" alt="" class="flex-shrink-0">
+                        <div>
+                            <h4><a href="@Url.Action("BlogDetails")">Max the Dog</a></h4>
+                            <time datetime="2025-03-15">Mar 15, 2025</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags-widget widget-item">
+                    <h3 class="widget-title">Tags</h3>
+                    <ul>
+                        <li><a href="#">Cats</a></li>
+                        <li><a href="#">Dogs</a></li>
+                        <li><a href="#">Adoption</a></li>
+                        <li><a href="#">Kittens</a></li>
+                        <li><a href="#">Puppies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adoption Entities -->
+        <div class="col-lg-8 category-posts">
+            <!-- Category Posts Section -->
+            <section id="category-postst" class="category-postst section">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row gy-4">
+
+                        <!-- Adoption Entity 1 -->
+                        <div class="col-lg-6">
+                            <article>
+                                <div class="post-img swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="~/assets/img/BB1hgLd0.jpg" alt="Luna" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/orange-tabby-cat.jpg" alt="Luna" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/orange-cat.jpg" alt="Luna" class="img-fluid"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                                <p class="post-category">Cat</p>
+
+                                <h2 class="title">
+                                    <a href="@Url.Action("AdoptionProfile", new { pet = "luna" })">Luna - Playful Kitten</a>
+                                </h2>
+
+                                <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                    <p><strong>Species:</strong> Cat | <strong>Age:</strong> 6 months | <strong>Sex:</strong> Female</p>
+                                    <p><strong>Breed:</strong> Domestic Shorthair | <strong>Weight:</strong> 4 lbs</p>
+                                </div>
+
+                                <p class="description" style="font-size: 15px; color: var(--default-color); line-height: 1.5; margin-bottom: 15px;">
+                                    Luna is a spirited kitten who loves chasing toys and napping in sunny spots. She’s perfect for a home filled with love and playtime!
+                                </p>
+
+                                <div class="d-flex align-items-center">
+                                    <img src="~/assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                                    <div class="post-meta">
+                                        <p class="post-author">Shelter A</p>
+                                        <p class="post-date">
+                                            <time datetime="2025-03-27">Mar 27, 2025</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div><!-- End adoption entity -->
+                        <!-- Adoption Entity 2 -->
+                        <div class="col-lg-6">
+                            <article>
+                                <div class="post-img swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="~/assets/img/german-Dog.jpg" alt="Rex" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/german-shepherd-dog-standing-at-the-park_Bildagentur-Zoonar-GmbH_Shutterstock.jpeg" alt="Rex" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/11-dogs-like-german-shepherd.png" alt="Rex" class="img-fluid"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                                <p class="post-category">Dog</p>
+
+                                <h2 class="title">
+                                    <a href="@Url.Action("AdoptionProfile", new { pet = "rex" })">Rex - Loyal Companion</a>
+                                </h2>
+
+                                <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                    <p><strong>Species:</strong> Dog | <strong>Age:</strong> 2 years | <strong>Sex:</strong> Male</p>
+                                    <p><strong>Breed:</strong> German Shepherd | <strong>Weight:</strong> 65 lbs</p>
+                                </div>
+
+                                <p class="description" style="font-size: 15px; color: var(--default-color); line-height: 1.5; margin-bottom: 15px;">
+                                    Rex is a loyal and energetic dog who enjoys long walks and playing fetch. He’s great with families and ready to be your best friend!
+                                </p>
+
+                                <div class="d-flex align-items-center">
+                                    <img src="~/assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                                    <div class="post-meta">
+                                        <p class="post-author">Shelter B</p>
+                                        <p class="post-date">
+                                            <time datetime="2025-03-27">Mar 27, 2025</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div><!-- End adoption entity -->
+                        <!-- Adoption Entity 3 -->
+                        <div class="col-lg-6">
+                            <article>
+                                <div class="post-img swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="~/assets/img/german-shepherd-dog-standing-at-the-park_Bildagentur-Zoonar-GmbH_Shutterstock.jpeg" alt="Max" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/german-Dog.jpg" alt="Max" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/11-dogs-like-german-shepherd.png" alt="Max" class="img-fluid"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                                <p class="post-category">Dog</p>
+
+                                <h2 class="title">
+                                    <a href="@Url.Action("AdoptionProfile", new { pet = "max" })">Max - Loyal Companion</a>
+                                </h2>
+
+                                <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                    <p><strong>Species:</strong> Dog | <strong>Age:</strong> 2 years | <strong>Sex:</strong> Male</p>
+                                    <p><strong>Breed:</strong> German Shepherd | <strong>Weight:</strong> 65 lbs</p>
+                                </div>
+
+                                <p class="description" style="font-size: 15px; color: var(--default-color); line-height: 1.5; margin-bottom: 15px;">
+                                    Max is a loyal and energetic dog who enjoys long walks and playing fetch. He’s great with families and ready to be your best friend!
+                                </p>
+
+                                <div class="d-flex align-items-center">
+                                    <img src="~/assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                                    <div class="post-meta">
+                                        <p class="post-author">Shelter D</p>
+                                        <p class="post-date">
+                                            <time datetime="2025-03-27">Mar 27, 2025</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div><!-- End adoption entity -->
+                        <!-- Adoption Entity 4 -->
+                        <div class="col-lg-6">
+                            <article>
+                                <div class="post-img swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="~/assets/img/orange-tabby-cat.jpg" alt="Rin" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/BB1hgLd0.jpg" alt="Rin" class="img-fluid"></div>
+                                        <div class="swiper-slide"><img src="~/assets/img/orange-cat.jpg" alt="Rin" class="img-fluid"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                                <p class="post-category">Cat</p>
+
+                                <h2 class="title">
+                                    <a href="@Url.Action("AdoptionProfile", new { pet = "rin" })">Rin - Playful Kitten</a>
+                                </h2>
+
+                                <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                    <p><strong>Species:</strong> Cat | <strong>Age:</strong> 6 months | <strong>Sex:</strong> Female</p>
+                                    <p><strong>Breed:</strong> Domestic Shorthair | <strong>Weight:</strong> 4 lbs</p>
+                                </div>
+
+                                <p class="description" style="font-size: 15px; color: var(--default-color); line-height: 1.5; margin-bottom: 15px;">
+                                    Rin is a spirited kitten who loves chasing toys and napping in sunny spots. She’s perfect for a home filled with love and playtime!
+                                </p>
+
+                                <div class="d-flex align-items-center">
+                                    <img src="~/assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                                    <div class="post-meta">
+                                        <p class="post-author">Shelter C</p>
+                                        <p class="post-date">
+                                            <time datetime="2025-03-27">Mar 27, 2025</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div><!-- End adoption entity -->
+
+                    </div>
+                </div>
+            </section><!-- /Category Posts Section -->
+            <!-- Pagination -->
+            <section id="pagination-2" class="pagination-2 section">
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <ul>
+                            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#" class="active">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li>...</li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section><!-- /Pagination 2 Section -->
+        </div>
+    </div>
+</div>
+<!-- Initialize Swiper for Multiple Images -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swipers = document.querySelectorAll('.post-img.swiper');
+        swipers.forEach(function (swiperElement) {
+            new Swiper(swiperElement, {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+    });
+</script>

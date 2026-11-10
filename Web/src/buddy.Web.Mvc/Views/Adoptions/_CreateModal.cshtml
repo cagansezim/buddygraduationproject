@@ -1,0 +1,64 @@
+﻿@model buddy.Adoptions.Dtos.CreateAdoptionDto
+
+<div class="modal fade" id="AdoptionCreateModal" tabindex="-1" role="dialog" aria-labelledby="AdoptionCreateModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AdoptionCreateModalLabel">@L("Create New Adoption")</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="AdoptionCreateForm" asp-action="Create" asp-controller="Adoptions" class="form-horizontal">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-body">
+                    <div class="form-group row required">
+                        <label class="col-md-3 col-form-label" for="PetId">@L("Pet ID")</label>
+                        <div class="col-md-9">
+                            <input id="PetId" name="PetId" type="number" class="form-control" placeholder="Enter the Pet ID" required />
+                            <small class="form-text text-muted">@L("Please provide the ID of the pet you want to put up for adoption.")</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group row required">
+                        <label class="col-md-3 col-form-label" for="ClinicId">@L("Clinic ID")</label>
+                        <div class="col-md-9">
+                            <input id="ClinicId" name="ClinicId" type="number" class="form-control" placeholder="Enter the Clinic ID" required />
+                            <small class="form-text text-muted">@L("Enter the clinic's ID where the pet is being checked.")</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Description">@L("Description")</label>
+                        <div class="col-md-9">
+                            <textarea id="Description" name="Description" class="form-control" placeholder="Enter a brief description of the pet's adoption case..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Image">@L("Pet Image (optional)")</label>
+                        <div class="col-md-9">
+                            <input id="Image" type="file" name="Image" class="form-control" />
+                            <small class="form-text text-muted">@L("Optional: Upload an image of the pet.")</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group row required">
+                        <label class="col-md-3 col-form-label" for="PetOwnerId">@L("Pet Owner ID")</label>
+                        <div class="col-md-9">
+                            <input id="PetOwnerId" name="PetOwnerId" type="number" class="form-control" placeholder="Enter the Pet Owner's ID" required />
+                            <small class="form-text text-muted">@L("Provide the ID of the pet owner who is putting the pet up for adoption.")</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@L("Cancel")</button>
+                    <button type="submit" class="btn btn-primary">@L("Save")</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

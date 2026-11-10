@@ -1,0 +1,41 @@
+﻿@model buddy.Adoptions.Dtos.UpdateAdoptionDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Edit Adoption Listing";
+}
+
+<section class="container py-5 light-background">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-4 create-card">
+                <div class="card-header text-white py-3 rounded-top" style="background-color: var(--accent-color);">
+                    <h4 class="mb-0" style="font-family: var(--heading-font); color: var(--backgorund-color);">Edit Adoption Listing</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit" asp-controller="ClientAdoptions" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Description</label>
+                            <textarea asp-for="Description" class="form-control rounded-pill" rows="5" placeholder="Update the pet's story..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Pet Image</label>
+                            <input type="file" name="ImageFile" class="form-control" accept="image/*" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="PetId" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Pet ID</label>
+                            <input asp-for="PetId" class="form-control rounded-pill" type="number" placeholder="Update Pet ID" />
+                            <span asp-validation-for="PetId" class="text-danger"></span>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">Edit Adoption Listing</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

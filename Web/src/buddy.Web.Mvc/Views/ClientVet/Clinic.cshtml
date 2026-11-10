@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Clinic";
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+}
+<div class="container my-5">
+    <!-- Main Card: Clinic Info -->
+    <div class="card shadow-4 mb-4" style="max-width: 100%;">
+        <div class="card-header bg-warning text-white">
+            <h3 class="mb-0">Clinic Details</h3>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <!-- First Column: Clinic Info -->
+                <div class="col-md-6">
+                    <!-- Clinic Image Row -->
+                    <div class="mb-4">
+                        <h5>Clinic Images</h5>
+                        <div class="d-flex">
+                            <img src="your-image-url.jpg" alt="Clinic Image" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover; margin-right: 10px;">
+                            <img src="your-image-url.jpg" alt="Clinic Image" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <!-- Address Row -->
+                    <div class="mb-4">
+                        <h5>Address</h5>
+                        <p><i class="bi bi-geo-alt me-2"></i>1234 Main Street, City, Country</p>
+                    </div>
+
+                    <!-- Animal Services Row -->
+                    <div class="mb-4">
+                        <h5>Animal Services</h5>
+                        <p>General Checkup, Surgery, Emergency Care</p>
+                    </div>
+
+                    <!-- Phone Number Row -->
+                    <div class="mb-4">
+                        <h5>Contact</h5>
+                        <p><i class="bi bi-telephone me-2"></i>+1 234 567 890</p>
+                    </div>
+
+                    <!-- Opening Hours Row -->
+                    <div class="mb-4">
+                        <h5>Opening Hours</h5>
+                        <p><i class="bi bi-clock me-2"></i>24 Hours Open</p>
+                    </div>
+                </div>
+
+                <!-- Second Column: Veterinarians Info -->
+                <div class="col-md-6">
+                    <!-- Veterinarians Card -->
+                    <div class="card shadow-sm">
+                        <div class="card-header" style="background-color: #f5f5f5;">
+                            <h5 class="mb-0">Veterinarians</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Individual Vet Card 1 -->
+                                <div class="col-md-12 mb-3">
+                                    <div class="card shadow-sm p-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <img src="your-vet-image-url.jpg" alt="Vet Profile Picture" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; margin-right: 10px;">
+                                                <div>
+                                                    <h6 class="mb-0">John Doe</h6>
+                                                    <p class="mb-0">Phone: +1 234 567 890</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Individual Vet Card 2 -->
+                                <div class="col-md-12 mb-3">
+                                    <div class="card shadow-sm p-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <img src="your-vet-image-url.jpg" alt="Vet Profile Picture" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; margin-right: 10px;">
+                                                <div>
+                                                    <h6 class="mb-0">Jane Smith</h6>
+                                                    <p class="mb-0">Phone: +1 234 567 890</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- More Vet Cards can go here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

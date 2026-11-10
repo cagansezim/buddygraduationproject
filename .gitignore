@@ -1,0 +1,6 @@
+
+# Buddy: runtime data and local artefacts
+**/App_Data/Logs/
+*.rar
+.DS_Store
+~$*

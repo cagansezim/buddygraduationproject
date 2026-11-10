@@ -1,0 +1,160 @@
+﻿@model buddy.ClientAIAnalysis.Dtos.CreateAnalysisDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Submit New AI Analysis";
+    var pets = ViewBag.UserPets as List<buddy.Pets.Dtos.PetDto>;
+}
+
+<section class="container py-5 light-background" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-4 create-card">
+                <div class="card-header text-white py-3 rounded-top" style="background-color: var(--accent-color);">
+                    <h4 class="mb-0" style="font-family: var(--heading-font); color: var(--backgorund-color);">@ViewBag.Title</h4>
+                </div>
+                <div class="card-body p-4">
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                    <form asp-action="Analyze" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <!-- Tab Navigation for Pet Selection -->
+                        <ul class="nav nav-pills mb-4" id="petTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link active rounded-pill" id="existing-tab" data-bs-toggle="pill" data-bs-target="#existing" role="tab" aria-selected="true">Existing Pet</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link rounded-pill" id="temporary-tab" data-bs-toggle="pill" data-bs-target="#temporary" role="tab" aria-selected="false">Temporary Pet</button>
+                            </li>
+                        </ul>
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="petTabsContent">
+                            <!-- Existing Pets Tab -->
+                            <div class="tab-pane fade show active" id="existing" role="tabpanel" aria-labelledby="existing-tab">
+                                @if (pets != null && pets.Any())
+                                {
+                                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                                        @foreach (var pet in pets)
+                                        {
+                                            <div class="col">
+                                                <label class="card pet-card shadow-sm border-0 rounded-3 overflow-hidden d-block position-relative hover-scale">
+                                                    <input type="radio" name="PetId" value="@pet.Id" class="position-absolute top-0 end-0 m-2 form-check-input" />
+                                                    @if (pet.Image != null)
+                                                    {
+                                                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(pet.Image)" class="card-img-top" style="height: 160px; object-fit: cover;" alt="@pet.Name" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="bg-secondary d-flex align-items-center justify-content-center" style="height: 160px;">
+                                                            <i class="bi bi-image fs-1 text-white"></i>
+                                                        </div>
+                                                    }
+                                                    <div class="card-body text-center">
+                                                        <h5 class="card-title fw-bold mb-1">@pet.Name</h5>
+                                                        <small class="text-muted">@pet.Species - @pet.Breed</small>
+                                                        <p class="text-muted small">Age: @pet.Age years</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="mt-3 text-end">
+                                        <a href="@Url.Action("Create", "ClientPets")" class="btn btn-outline-secondary btn-sm rounded-pill">+ Add New Pet</a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-12">
+                                        <div class="alert alert-info rounded-3 shadow-sm text-center py-4">
+                                            No registered pets. Please <a href="@Url.Action("Create", "ClientPets")">add one</a>.
+                                        </div>
+                                    </div>
+                                  
+                                }
+                            </div>
+                            <!-- Temporary Pet Tab -->
+                            <div class="tab-pane fade" id="temporary" role="tabpanel" aria-labelledby="temporary-tab">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Pet Name</label>
+                                        <input type="text" name="TempPetName" class="form-control" placeholder="e.g., Luna" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Species</label>
+                                        <input type="text" name="TempSpecies" class="form-control" placeholder="e.g., Dog" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Breed</label>
+                                        <input type="text" name="TempBreed" class="form-control" placeholder="e.g., Golden Retriever" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Age</label>
+                                        <input type="number" name="TempAge" class="form-control" placeholder="e.g., 4" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <!-- Analysis Inputs -->
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Describe Symptoms</label>
+                            <textarea class="form-control" name="Prompt" rows="4" placeholder="Describe symptoms in detail..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Symptom Duration</label>
+                            <input type="text" name="Duration" class="form-control" placeholder="e.g., 3 days" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Additional Comments</label>
+                            <textarea class="form-control" name="Comments" rows="3" placeholder="Any extra notes..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Upload Pet Images</label>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="file" name="images" class="form-control" accept="image/*" multiple />
+                                    <small class="form-text text-muted">Optional — upload photos from your device.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">Submit Analysis</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // Bootstrap 5 handles tab toggling automatically.
+    </script>
+}
+<style>
+    .hover-scale {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .hover-scale:hover {
+        transform: scale(1.02);
+    }
+
+    .pet-card {
+        cursor: pointer;
+    }
+    #petTabs .nav-link {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #dee2e6 !important;
+        box-shadow: none !important;
+    }
+
+    #petTabs .nav-link.active {
+        background-color: var(--accent-color) !important;
+        color: var(--backgorund-color) !important;
+        border: 1px solid var(--accent-color) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+</style>

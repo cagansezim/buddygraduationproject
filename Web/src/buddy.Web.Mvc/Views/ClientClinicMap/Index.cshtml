@@ -1,0 +1,55 @@
+﻿@model Abp.Application.Services.Dto.ListResultDto<buddy.ClinicMaps.Dtos.ClinicWithVeterinarianDto>
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Clinics and Veterinarians";
+}
+
+<div class="page-title">
+    <div class="title-wrapper">
+        <h1>Clinics and Veterinarians</h1>
+        <p>Select a clinic to view its available veterinarians.</p>
+    </div>
+</div>
+
+<section id="clinic-map" class="section">
+    <div class="container">
+        @if (Model.Items.Any())
+        {
+            @foreach (var clinic in Model.Items)
+            {
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="card-title mb-0">@clinic.Name</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <strong>Address:</strong> @clinic.Address
+                                </p>
+                        @if (clinic.Veterinarians != null && clinic.Veterinarians.Any())
+                        {
+                                        <ul class="list-group list-group-flush">
+                                @foreach (var vet in clinic.Veterinarians)
+                                {
+                                                    <li class="list-group-item">
+                                        @vet.FullName - @vet.Specialization
+                                        @* Optionally, include a selection button or link *@
+                                                    </li>
+                                }
+                                        </ul>
+                        }
+                        else
+                        {
+                                        <p class="text-muted">No veterinarians available for this clinic.</p>
+                        }
+                            </div>
+                        </div>
+            }
+        }
+        else
+        {
+                <div class="alert alert-warning">
+                    No clinics found.
+                </div>
+        }
+    </div>
+</section>

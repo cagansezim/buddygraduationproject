@@ -1,0 +1,289 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+    ViewBag.Title = "Requests";
+}
+
+<section class="section">    
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+            <!-- Calendar Column -->
+            <div class="col-md-4 col-lg-3 mb-4 p-2">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-white text-center">
+                        <h5 class="mb-0">Thu, Apr 13</h5>
+                        <small>2024</small>
+                    </div>
+                    <div class="card calendar-card">                        
+                        <div class="card-body p-2">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-end align-items-center gap-2">
+                        <span class="me-2">Add Appointment</span>
+                        <button class="btn btn-pink d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px;">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Time Slots + Requests -->
+            <div class="col-md-8 col-lg-9">
+                <div class="mb-4">
+                    <!-- Timeslot Display -->
+                    <div class="card shadow-sm">
+                        <div class="card-header fw-bold text-start fs-3">
+                            Thursday, April 13
+                        </div>
+                        <div class="card-body">
+
+
+                            <!-- Row 1: Morning Slots (08:00 - 11:30) -->
+                            <div class="d-flex flex-wrap justify-content-start gap-2 mb-3">
+                                @for (int i = 8; i <= 11; i++)
+                                {
+                                    bool isAvailable = i % 2 == 0; // Example condition: even hours are available
+
+                                    // 00 minutes
+                                    if (isAvailable)
+                                    {
+                                        <button class="btn time-slot available">
+                                            @($"{i:00}:00")
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn time-slot unavailable">
+                                            @($"{i:00}:00")
+                                        </div>
+                                    }
+
+                                    // 30 minutes
+                                    if (isAvailable)
+                                    {
+                                        <button class="btn time-slot available">
+                                            @($"{i:00}:30")
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn time-slot unavailable">
+                                            @($"{i:00}:30")
+                                        </div>
+                                    }
+                                }
+                            </div>
+
+
+                            <!-- Row 2: Afternoon Slots (13:00 - 16:30) -->
+                            <div class="d-flex flex-wrap justify-content-start gap-2">
+                                @for (int i = 13; i <= 16; i++)
+                                {
+                                    bool isAvailable = i % 2 == 0; // Example: even hours available
+
+                                    // 00 minutes
+                                    if (isAvailable)
+                                    {
+                                        <button class="btn time-slot available">
+                                            @($"{i:00}:00")
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn time-slot unavailable">
+                                            @($"{i:00}:00")
+                                        </div>
+                                    }
+
+                                    // 30 minutes
+                                    if (isAvailable)
+                                    {
+                                        <button class="btn time-slot available">
+                                            @($"{i:00}:30")
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn time-slot unavailable">
+                                            @($"{i:00}:30")
+                                        </div>
+                                    }
+                                }
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Appointment Requests Panel -->
+                <div class="card shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center" style="padding: 1rem 1.25rem; font-size: 1.2rem;">
+                        <span class="d-flex align-items-center">                            
+                            <strong>Appointment Requests</strong>
+                        </span>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Appointment Request Card -->
+                        <div class="border rounded p-3 mb-3 shadow-sm bg-light d-flex justify-content-between align-items-center">
+                            <!-- Time Slot (Left) -->
+                            <div class="px-3 text-center" style="min-width: 120px;">
+                                <div class="text-muted" style="font-size: 1.0rem;">April 13</div>
+                                <div class="fw-bold text-dark" style="font-size: 1.5rem;">13:00</div>                                
+                            </div>
+
+                            <!-- Pet Info (Center) -->
+                            <div class="flex-grow-1 px-3">
+                                <div class="fw-bold" style="font-size: 1.1rem;">Buddy</div>
+                                <div class="text-muted">2 yrs, Male, Dog</div>
+                                <div><em>General check-up and annual vaccine.</em></div>
+                            </div>
+
+                            <!-- Actions and Status (Right) -->
+                            <div class="text-end" style="min-width: 150px;">
+                                <!-- Registered badge -->
+                                <div class="mb-2">
+                                    <span class="badge bg-success">Registered</span>
+                                </div>
+
+                                <!-- View Record (only for registered pets) -->
+                                <div class="mb-2">
+                                    <a href="#" class="btn btn-info btn-sm">
+                                        <i class="bi bi-file-earmark-text"></i> View Record
+                                    </a>
+                                </div>
+
+                                <!-- Accept and Reject (Wider) -->
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-success px-4 py-2" title="Accept">
+                                        <i class="bi bi-check2 fs-5"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger px-4 py-2" title="Reject">
+                                        <i class="bi bi-x fs-5"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Appointment Request Card - Unregistered -->
+                        <div class="border rounded p-3 mb-3 shadow-sm bg-light d-flex justify-content-between align-items-center">
+                            <!-- Time Slot (Left) -->
+                            <div class="px-3 text-center" style="min-width: 120px;">
+                                <div class="text-muted" style="font-size: 1.0rem;">April 13</div>
+                                <div class="fw-bold text-dark" style="font-size: 1.5rem;">15:30</div>                                
+                            </div>
+
+                            <!-- Pet Info (Center) -->
+                            <div class="flex-grow-1 px-3">
+                                <div class="fw-bold" style="font-size: 1.1rem;">Luna</div>
+                                <div class="text-muted">1.5 yrs, Female, Cat</div>
+                                <div><em>Unusual behavior and vomiting.</em></div>
+                            </div>
+
+                            <!-- Actions and Status (Right) -->
+                            <div class="text-end" style="min-width: 150px;">
+                                <!-- Unregistered badge -->
+                                <div class="mb-2">
+                                    <span class="badge bg-danger">Unregistered</span>
+                                </div>
+
+                                <!-- Accept and Reject (Wider Ticks) -->
+                                <div class="d-flex gap-2 justify-content-end">
+                                    <a href="#" class="btn btn-success px-4 py-2" title="Accept">
+                                        <i class="bi bi-check2 fs-5"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger px-4 py-2" title="Reject">
+                                        <i class="bi bi-x fs-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pagination-2" class="pagination-2 section">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <ul>
+                <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="active">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>...</li>
+                <li><a href="#">10</a></li>
+                <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            height: 400,
+            events: [
+                {
+                    title: 'Buddy - Checkup',
+                    start: '2025-04-15',
+                    description: '10:00 AM - Springfield Vet Clinic'
+                },
+                {
+                    title: 'Luna - Vaccination',
+                    start: '2025-04-20',
+                    description: '2:00 PM - Springfield Vet Clinic'
+                }
+            ],
+            eventClick: function (info) {
+                alert(info.event.title + '\n' + info.event.extendedProps.description);
+            }
+        });
+
+        calendar.render();
+    });
+</script>
+<style>
+    .btn-pink {
+        background-color: #f06292;
+        color: white;
+    }
+
+        .btn-pink:hover {
+            background-color: #e91e63;
+        }
+
+    .time-slot {
+        width: 100px;
+        height: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #6c757d;
+        border-radius: 4px;
+        position: relative;
+        padding: 0;
+    }
+
+        .time-slot.available {           
+            cursor: pointer;
+        }
+
+        .time-slot.unavailable {
+            background-color: #e2e3e5; /* Light gray */
+            color: #6c757d;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+</style>

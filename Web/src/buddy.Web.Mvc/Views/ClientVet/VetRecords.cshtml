@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "VetRecords";
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+}
+<div class="container my-5">
+    <!-- Main Card: My Records -->
+    <div class="card shadow-4 mb-4" style="max-width: 100%;">
+        <div class="card-header bg-warning text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">My Records</h3>
+            <div class="input-group w-auto ms-auto">
+                <input type="text" class="form-control" placeholder="Search records" aria-label="Search records" aria-describedby="search-addon">
+                <span class="input-group-text" id="search-addon" style="background-color: white">
+                    <i class="fas fa-search" ></i>
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Card Body with Records -->
+        <div class="card-body">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Example Record Card 1 -->
+                <div class="col">
+                    <div class="card shadow-sm p-3 d-flex flex-column">
+                        <div class="card-header " style="background-color: #f5f5f5">
+                            <h5 class="mb-0">Buddy's Record</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Description:</strong> Buddy had a routine checkup.</p>
+                            <p><strong>Date:</strong> 20/04/2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Record Card 2 -->
+                <div class="col">
+                    <div class="card shadow-sm p-3 d-flex flex-column">
+                        <div class="card-header " style="background-color: #f5f5f5">
+                            <h5 class="mb-0">Milo's Record</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Description:</strong> Milo was treated for an ear infection.</p>
+                            <p><strong>Date:</strong> 15/04/2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More record cards can go here -->
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    .card-body {
+        flex-grow: 1; /* Ensures that the card body stretches to fill the available space */
+    }
+
+    .card {
+        height: 100%; /* Makes sure the card takes the full height available */
+    }
+
+</style>

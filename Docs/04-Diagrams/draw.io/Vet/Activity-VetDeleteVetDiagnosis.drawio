@@ -1,0 +1,82 @@
+<mxfile host="Electron" modified="2024-11-30T20:17:07.314Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="A8R2Yu3HegTDYPwhKrqo" version="24.4.0" type="device">
+  <diagram name="Page-1" id="WvEYYY-KVJSfwLBKc-PX">
+    <mxGraphModel dx="-826" dy="609" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-21" value="Vet" style="swimlane;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="1730" y="50" width="600" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-22" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="106.38000000000001" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-23" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="266.38" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-24" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="43.63" y="45" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-25" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-24" target="kRBEfRTEJ-2otBWDV3Mk-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="106.38000000000001" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-26" value="View Dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="266.38" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-27" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-26" target="kRBEfRTEJ-2otBWDV3Mk-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="436.38" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-28" value="Click on Patients" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="436.38" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-29" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="496.38" y="125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-30" value="Click on a Patient" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="436.38" y="125" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-31" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-30" target="kRBEfRTEJ-2otBWDV3Mk-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="496.38" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-32" value="Click on Record" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="266.38" y="125" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-33" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="285" y="205" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-34" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-32" target="kRBEfRTEJ-2otBWDV3Mk-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="396.63" y="155" as="targetPoint" />
+            <mxPoint x="243.63" y="150" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-35" value="Click on Remove Diagnosis" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="106.38000000000011" y="125" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-36" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-35" target="kRBEfRTEJ-2otBWDV3Mk-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="166.3800000000001" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-38" value="Click Save" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="kRBEfRTEJ-2otBWDV3Mk-21">
+          <mxGeometry x="106.38000000000011" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kRBEfRTEJ-2otBWDV3Mk-40" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="kRBEfRTEJ-2otBWDV3Mk-21" source="kRBEfRTEJ-2otBWDV3Mk-38" target="kRBEfRTEJ-2otBWDV3Mk-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="276" y="230" as="targetPoint" />
+            <mxPoint x="236" y="230" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Dashboard";
+    ViewBag.BodyClass = "dashboard-page";
+}
+
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="title-wrapper">
+            <h1>Dashboard</h1>
+            <p>Welcome to your pet care dashboard. Manage your pets, adoptions, and more.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4 gy-4">
+        <!-- What's Wrong With My Pet? -->
+        <div class="col-lg-6">
+            <a href="@Url.Action("WwwMyPet", "ClientPetOwner")" class="dashboard-card text-center shadow-sm p-4 d-block">
+                <i class="bi bi-exclamation-circle display-4 text-danger"></i>
+                <h3 class="mt-3">What's Wrong With My Pet?</h3>
+                <p>Take a quick survey and let AI analyze your pet's symptoms.</p>
+            </a>
+        </div>
+
+        <!-- My Pets -->
+        <div class="col-lg-6">
+            <a href="@Url.Action("MyPets", "ClientPetOwner")" class="dashboard-card text-center shadow-sm p-4 d-block">
+                <i class="bi bi-house-heart display-4 text-primary"></i>
+                <h3 class="mt-3">My Pets</h3>
+                <p>View and manage your pets.</p>
+            </a>
+        </div>
+
+        <!-- Clinic Map -->
+        <div class="col-lg-6">
+            <a href="@Url.Action("ClinicMap", "ClientPetOwner")" class="dashboard-card text-center shadow-sm p-4 d-block">
+                <i class="bi bi-map display-4 text-success"></i>
+                <h3 class="mt-3">Clinic Map</h3>
+                <p>Find nearby veterinary clinics.</p>
+            </a>
+        </div>
+
+        <!-- Appointments -->
+        <div class="col-lg-6">
+            <a href="@Url.Action("Appointments", "ClientPetOwner")" class="dashboard-card text-center shadow-sm p-4 d-block">
+                <i class="bi bi-calendar-check display-4 text-warning"></i>
+                <h3 class="mt-3">Appointments</h3>
+                <p>Manage your vet appointments.</p>
+            </a>
+        </div>
+
+        <!-- My Adoptions -->
+        <div class="col-lg-6">
+            <a href="@Url.Action("MyAdoptions", "ClientPetOwner")" class="dashboard-card text-center shadow-sm p-4 d-block">
+                <i class="bi bi-heart display-4 text-danger"></i>
+                <h3 class="mt-3">My Adoptions</h3>
+                <p>Adopt a new pet or view your adoptions.</p>
+            </a>
+        </div>
+    </div>
+</main>

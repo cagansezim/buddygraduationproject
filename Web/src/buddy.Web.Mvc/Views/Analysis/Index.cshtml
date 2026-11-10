@@ -1,0 +1,187 @@
+﻿@model buddy.AI.Analysis.Dto.AnalysisInput
+
+<h2 class="text-center mb-5" style="font-weight: 600; color: #2c3e50;">Pet Health Analysis</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <form asp-action="Analyze" method="post" enctype="multipart/form-data">
+                <!-- Health Survey Section -->
+                <div class="card mb-4 shadow-lg" style="border: none; border-radius: 15px; overflow: hidden;">
+                    <div class="card-header" style="background: linear-gradient(135deg, #3498db, #2980b9); color: white;">
+                        <h5 class="mb-0">Health Survey</h5>
+                    </div>
+                    <div class="card-body" style="background: #f9fbfd;">
+                        <div class="form-group mb-3">
+                            <label asp-for="Prompt" class="font-weight-bold">Primary Symptoms:</label>
+                            <textarea asp-for="Prompt" rows="4" class="form-control" placeholder="Describe your pet's main symptoms (e.g., coughing, lethargy)"></textarea>
+                            <span asp-validation-for="Prompt" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="duration" class="font-weight-bold">Symptom Duration:</label>
+                            <input type="text" id="duration" name="duration" class="form-control" placeholder="e.g., 3 days" />
+                        </div>
+                        <div class="form-group">
+                            <label for="petType" class="font-weight-bold">Pet Type:</label>
+                            <select id="petType" name="petType" class="form-control">
+                                <option value="">Select Pet Type</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Upload Section -->
+                <div class="card mb-4 shadow-lg" style="border: none; border-radius: 15px; overflow: hidden;">
+                    <div class="card-header" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;">
+                        <h5 class="mb-0">Upload Pet Images (Optional)</h5>
+                    </div>
+                    <div class="card-body" style="background: #f9fbfd;">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Drag and drop images here or click to upload:</label>
+                            <div id="dropZone" class="border-dashed p-4 text-center" style="border: 2px dashed #bdc3c7; border-radius: 10px; transition: all 0.3s;">
+                                <p class="mb-0">Supports multiple images (JPEG, PNG)</p>
+                                <input type="file" name="images" id="imageUpload" accept="image/*" multiple class="d-none" />
+                            </div>
+                            <div id="imagePreviews" class="mt-3 d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="card mb-4 shadow-lg" style="border: none; border-radius: 15px; overflow: hidden;">
+                    <div class="card-header" style="background: linear-gradient(135deg, #3498db, #9b59b6); color: white;">
+                        <h5 class="mb-0">Additional Comments</h5>
+                    </div>
+                    <div class="card-body" style="background: #f9fbfd;">
+                        <div class="form-group">
+                            <label for="comments" class="font-weight-bold">Extra Information:</label>
+                            <textarea id="comments" name="comments" rows="3" class="form-control" placeholder="e.g., My pet has a history of allergies"></textarea>
+                            <small id="charCount" class="form-text text-muted">0/500 characters</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; padding: 12px 30px; border-radius: 25px; transition: transform 0.2s;">Analyze Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    .card {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+    .form-control:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    }
+
+    #dropZone:hover, #dropZone.dragover {
+        background: #ecf0f1;
+        border-color: #3498db;
+    }
+
+    .preview-img {
+        position: relative;
+        margin: 5px;
+    }
+
+        .preview-img img {
+            max-width: 150px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .preview-img .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<!-- JavaScript for Interactivity -->
+<script>
+    // Image Upload and Preview
+    const dropZone = document.getElementById('dropZone');
+    const imageUpload = document.getElementById('imageUpload');
+    const imagePreviews = document.getElementById('imagePreviews');
+    let uploadedFiles = [];
+
+    dropZone.addEventListener('click', () => imageUpload.click());
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('dragover');
+    });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('dragover');
+        handleFiles(e.dataTransfer.files);
+    });
+    imageUpload.addEventListener('change', (e) => handleFiles(e.target.files));
+
+    function handleFiles(files) {
+        for (const file of files) {
+            if (file.type.startsWith('image/')) {
+                uploadedFiles.push(file);
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const div = document.createElement('div');
+                    div.className = 'preview-img';
+                    div.innerHTML = `
+                        <img src="${e.target.result}" alt="Preview">
+                        <button class="delete-btn" type="button">×</button>
+                    `;
+                    div.querySelector('.delete-btn').addEventListener('click', () => {
+                        div.remove();
+                        uploadedFiles = uploadedFiles.filter(f => f !== file);
+                        updateFileInput();
+                    });
+                    imagePreviews.appendChild(div);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        updateFileInput();
+    }
+
+    function updateFileInput() {
+        const dataTransfer = new DataTransfer();
+        uploadedFiles.forEach(file => dataTransfer.items.add(file));
+        imageUpload.files = dataTransfer.files;
+    }
+
+    // Comments Character Counter
+    const comments = document.getElementById('comments');
+    const charCount = document.getElementById('charCount');
+    comments.addEventListener('input', () => {
+        const count = comments.value.length;
+        charCount.textContent = `${count}/500 characters`;
+        charCount.style.color = count > 500 ? '#e74c3c' : '#6c757d';
+    });
+</script>

@@ -1,0 +1,48 @@
+﻿@model buddy.AI.Analysis.Dto.ClientAIAnalysisResultDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Diagnosis Details";
+}
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5"><i class="bi bi-clipboard-data text-info"></i> Diagnosis Details</h2>
+
+    <div class="card border-0 shadow-sm rounded-4 mb-5">
+        <div class="card-header bg-primary text-white rounded-top-4"><h5 class="mb-0">Overview</h5></div>
+        <div class="card-body">
+            <p><b>Date:</b> @Model.Date:yyyy-MM-dd HH:mm</p>
+            <p><b>Symptoms:</b> @Model.Prompt</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        @foreach (var tup in new[]{ ("Possible Causes",Model.PossibleCauses),
+        ("Recommendations",Model.Recommendations),
+        ("What to Tell Vet",Model.WhatToTellYourVet)})
+        {
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-header bg-info text-white rounded-top-4"><h6 class="mb-0">@tup.Item1</h6></div>
+                    <div class="card-body small">
+                        @if (tup.Item2?.Any() == true)
+                        {
+                            <ol class="mb-0">@foreach (var s in tup.Item2)
+                                {
+                                    <li>@s</li>
+                                }</ol>
+                        }
+                        else
+                        {
+                            <span class="text-muted">– none –</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="text-center">
+        <a asp-action="MyAnalysisResults" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back
+        </a>
+    </div>
+</div>

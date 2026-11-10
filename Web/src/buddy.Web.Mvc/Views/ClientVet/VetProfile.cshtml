@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "VetProfile";
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+}
+<div class="my-5 container">
+    <div class="card shadow-4 mb-4" style="max-width: 100%;">
+        <div class="card-header bg-warning text-white text-left">
+            <h3 class="mb-0">My Profile</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- First Column: Vet's Picture -->
+                <div class="col-md-4 d-flex flex-column align-items-center">
+                    <img src="~/assets/img/user-placeholder.png" alt="Vet's Picture" class="img-fluid rounded-circle mb-3" style="width: 180px; height: 180px; object-fit: cover;">
+                    <button class="btn btn-secondary mt-3">Change Picture</button>
+                </div>
+
+
+                <!-- Second Column: Vet's Professional Information -->
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5>Veterinary Details</h5>
+                        <!-- Edit Icon -->
+                        <a href="#" class="text-dark">
+                            <i class="fas fa-edit fs-5"></i>
+                        </a>
+                    </div>
+                    <p><strong>Name:</strong> Dr. John Doe</p>
+                    <p><strong>Specialization:</strong> Small Animal Medicine</p>
+                    <p><strong>Contact:</strong> (555) 123-4567</p>
+                    <p><strong>Email:</strong> john.doe@vetclinic.com</p>
+                    <p><strong>Qualifications:</strong> DVM, MSc in Veterinary Medicine</p>
+                    <p><strong>Experience:</strong> 10+ years of experience in animal care and surgery</p>
+                    <!-- You can add more professional details here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

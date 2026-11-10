@@ -1,0 +1,147 @@
+﻿@model Abp.Application.Services.Dto.PagedResultDto<buddy.Adoptions.Dtos.AdoptionDto>
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Available Adoptions";
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int pageSize = ViewBag.PageSize ?? 10;
+    int totalCount = ViewBag.TotalCount ?? 0;
+    int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+}
+
+<section class="py-5 bg-light min-vh-100">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary">Find Your Perfect Companion</h1>
+            <p class="lead text-muted">Explore adorable pets ready for adoption.</p>
+        </div>
+
+        <div class="row">
+            <!-- Filter Sidebar -->
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-primary text-white rounded-top">
+                        <h5 class="mb-0">Refine Your Search</h5>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Index" asp-controller="ClientAdoptions" method="get" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" name="Keyword" value="@ViewBag.Keyword" class="form-control rounded-start" placeholder="Search pets..." />
+                                <button class="btn btn-primary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                        <button class="btn btn-outline-primary w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+                            <i class="bi bi-filter"></i> Filters
+                        </button>
+                        <div class="collapse" id="filterCollapse">
+                            <form asp-action="Index" asp-controller="ClientAdoptions" method="get">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Sex</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sex" value="Male" id="sexMale" class="form-check-input" @(ViewBag.Sex == "Male" ? "checked" : "") />
+                                        <label for="sexMale" class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sex" value="Female" id="sexFemale" class="form-check-input" @(ViewBag.Sex == "Female" ? "checked" : "") />
+                                        <label for="sexFemale" class="form-check-label">Female</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Species</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="Species" value="Cat" id="speciesCat" class="form-check-input" @(ViewBag.Species == "Cat" ? "checked" : "") />
+                                        <label for="speciesCat" class="form-check-label">Cat</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Species" value="Dog" id="speciesDog" class="form-check-input" @(ViewBag.Species == "Dog" ? "checked" : "") />
+                                        <label for="speciesDog" class="form-check-label">Dog</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxAge" class="form-label fw-semibold">Max Age: <span id="maxAgeValue">@(ViewBag.MaxAge ?? "240")</span> months</label>
+                                    <input type="range" name="MaxAge" id="maxAge" min="0" max="240" value="@(ViewBag.MaxAge ?? 240)" class="form-range" oninput="document.getElementById('maxAgeValue').innerText = this.value" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxWeight" class="form-label fw-semibold">Max Weight: <span id="maxWeightValue">@(ViewBag.MaxWeight ?? "100")</span> kg</label>
+                                    <input type="range" name="MaxWeight" id="maxWeight" min="0" max="100" value="@(ViewBag.MaxWeight ?? 100)" class="form-range" oninput="document.getElementById('maxWeightValue').innerText = this.value" />
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill">Apply Filters</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adoption Listings -->
+            <div class="col-lg-9">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    @if (Model.Items.Any())
+                    {
+                        foreach (var adoption in Model.Items)
+                        {
+                            <div class="col">
+                                <div class="card h-100 shadow-lg border-0 rounded-3 overflow-hidden hover-shadow">
+                                    @if (adoption.Image != null && adoption.Image.Length > 0)
+                                    {
+                                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(adoption.Image)" class="card-img-top object-fit-cover" alt="@adoption.PetName" style="height: 200px;" />
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-secondary d-flex align-items-center justify-content-center" style="height: 200px;">
+                                            <i class="bi bi-image fs-1 text-white"></i>
+                                        </div>
+                                    }
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold text-primary">@adoption.PetName</h5>
+                                        <p class="card-text text-muted"><strong>Species:</strong> @adoption.Species</p>
+                                        <p class="card-text text-muted"><strong>Age:</strong> @adoption.Age years</p>
+                                        <p class="card-text text-muted text-truncate">@adoption.Description</p>
+                                    </div>
+                                    <div class="card-footer bg-light border-0">
+                                        <small class="text-muted">Posted on @adoption.Created_at.ToString("MMM dd, yyyy")</small>
+                                        <a href="@Url.Action("Details", "ClientAdoptions", new { id = adoption.Id })" class="btn btn-outline-primary btn-sm float-end rounded-pill">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12">
+                            <div class="alert alert-info rounded-3 shadow-sm text-center" role="alert">
+                                No adoption listings available right now. Check back later!
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Pagination -->
+                @if (totalPages > 1)
+                {
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                                <a class="page-link rounded-pill" href="@Url.Action("Index", new { Keyword = ViewBag.Keyword, Species = ViewBag.Species, Sex = ViewBag.Sex, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight, page = currentPage - 1 })">Previous</a>
+                            </li>
+                            @for (int i = 1; i <= totalPages; i++)
+                            {
+                                <li class="page-item @(i == currentPage ? "active" : "")">
+                                    <a class="page-link rounded-pill" href="@Url.Action("Index", new { Keyword = ViewBag.Keyword, Species = ViewBag.Species, Sex = ViewBag.Sex, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight, page = i })">@i</a>
+                                </li>
+                            }
+                            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                                <a class="page-link rounded-pill" href="@Url.Action("Index", new { Keyword = ViewBag.Keyword, Species = ViewBag.Species, Sex = ViewBag.Sex, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight, page = currentPage + 1 })">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // You can add any additional JavaScript for filters if necessary.
+    </script>
+}

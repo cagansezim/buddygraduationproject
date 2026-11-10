@@ -1,0 +1,127 @@
+﻿@model Abp.Application.Services.Dto.ListResultDto<buddy.Adoptions.Dtos.AdoptionDto>
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "My Adoption Listings";
+}
+
+<main class="main">
+    <div class="container py-4">
+        <!-- Page Title -->
+        <div class="page-title">
+            <div class="title-wrapper text-center">
+                <h1>My Adoptions</h1>
+                <p>Manage and view your adoption listings.</p>
+            </div>
+        </div>
+
+        <!-- Add Adoption Button -->
+        <div class="text-end mb-4">
+            <a href="@Url.Action("Create", "ClientAdoptions")" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">
+                <i class="bi bi-plus-lg"></i> Create Adoption
+            </a>
+        </div>
+
+        <!-- Adoption Listings -->
+        <section id="category-postst" class="category-postst section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    @if (Model.Items.Any())
+                    {
+                        foreach (var adoption in Model.Items)
+                        {
+                            <div class="col">
+                                <article class="position-relative shadow-sm p-3 rounded-3">
+                                    <!-- Image -->
+                                    <div class="post-img swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                @if (adoption.Image != null && adoption.Image.Length > 0)
+                                                {
+                                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(adoption.Image)" class="card-img-top object-fit-cover img-fluid" alt="@adoption.PetName" style="height: 200px;" />
+                                                }
+                                                else
+                                                {
+                                                    <div class="bg-secondary d-flex align-items-center justify-content-center img-fluid" style="height: 200px;">
+                                                        <i class="bi bi-image fs-1 text-white"></i>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+
+                                   
+
+                                    <!-- Content -->
+                                    <p class="post-category">@adoption.Species</p>
+                                    <a href="@Url.Action("Details", "ClientAdoptions", new { id = adoption.Id })">
+                                    <h2 class="title">
+                                            @adoption.PetName - @(adoption.Description?.Split(' ').Take(2).Aggregate((a, b) => a + " " + b) ?? "Adoption")
+                                      
+                                    </h2>
+                                    <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                        <p><strong>Species:</strong> @adoption.Species | <strong>Age:</strong> @adoption.Age years | <strong>Sex:</strong>Male)</p>
+                                        <p><strong>Breed:</strong> @(adoption.Race ?? "N/A") | <strong>Height:</strong> @adoption.Height cm | <strong>Weight:</strong> @adoption.Weight kg</p>
+                                        <p><strong>Vaccinated:</strong> @(adoption.Is_vaccinated ? "Yes" : "No")</p>
+                                    </div>
+                                   
+                                    <div class="d-flex align-items-center">
+                                        <div class="post-meta">
+                                            <p class="post-author">@(adoption.PetOwnerName ?? "Unknown")</p>
+                                            <p class="post-date">
+                                                <time datetime="@adoption.Created_at.ToString("yyyy-MM-dd")">@adoption.Created_at.ToString("MMM dd, yyyy")</time>
+                                            </p>
+                                               
+                                        </div>
+                                            <!-- Edit and Delete Buttons -->
+                                            <div class="pet-actions position-absolute bottom-2 end-0 mt-2 me-2">
+                                                <a href="@Url.Action("Edit", "ClientAdoptions", new { id = adoption.Id })" class="btn btn-sm me-1 rounded-pill" id="edit-delete-btn">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <form asp-action="Delete" asp-controller="ClientAdoptions" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete @adoption.PetName\'s listing?');">
+                                                    <input type="hidden" name="id" value="@adoption.Id" />
+                                                    <button type="submit" class="btn btn-sm rounded-pill" id="edit-delete-btn">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                    </div>
+                                    </a>
+                                </article>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12">
+                            <div class="alert alert-info rounded-3 shadow-sm text-center py-4">
+                                You haven’t listed any pets for adoption yet.
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Initialize Swiper for Multiple Images -->
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swipers = document.querySelectorAll('.post-img.swiper');
+            swipers.forEach(function (swiperElement) {
+                new Swiper(swiperElement, {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                });
+            });
+        });
+    </script>
+    }

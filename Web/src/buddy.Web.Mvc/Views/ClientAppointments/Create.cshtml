@@ -1,0 +1,58 @@
+﻿@model buddy.Appointments.Dtos.CreateAppointmentDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Schedule Appointment";
+}
+
+<div class="page-title">
+    <div class="title-wrapper">
+        <h1>Schedule Appointment</h1>
+        <p>Fill out the details to schedule your appointment.</p>
+    </div>
+</div>
+
+<section id="create-appointment" class="section">
+    <div class="container">
+        <form asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label asp-for="PetId" class="form-label">Pet</label>
+                <input asp-for="PetId" class="form-control" placeholder="Enter Pet Id" />
+                <span asp-validation-for="PetId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VetUserId" class="form-label">Veterinarian</label>
+                <input asp-for="VetUserId" class="form-control" placeholder="Enter Vet User Id" />
+                <span asp-validation-for="VetUserId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ClinicId" class="form-label">Clinic</label>
+                <input asp-for="ClinicId" class="form-control" placeholder="Enter Clinic Id" />
+                <span asp-validation-for="ClinicId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Status" class="form-label">Status</label>
+                <input asp-for="Status" class="form-control" placeholder="e.g., Scheduled" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ScheduledDateTime" class="form-label">Scheduled Date & Time</label>
+                <input asp-for="ScheduledDateTime" type="datetime-local" class="form-control" />
+                <span asp-validation-for="ScheduledDateTime" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Schedule Appointment</button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    @* Include validation scripts if needed *@
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}

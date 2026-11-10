@@ -1,0 +1,628 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="7dFK9XFvjFHcxy2xmJut">
+    <mxGraphModel dx="1640" dy="1245" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ndGepi2-suIIdVUTrnry-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1360" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1940" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2430" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1735" y="340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-132" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-5" value="Pet Care SaaS Platform" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="310" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-11" target="ndGepi2-suIIdVUTrnry-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-11" target="ndGepi2-suIIdVUTrnry-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-11" target="ndGepi2-suIIdVUTrnry-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-11" target="ndGepi2-suIIdVUTrnry-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-11" target="ndGepi2-suIIdVUTrnry-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-11" value="Preliminary Work" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="500" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-5" target="ndGepi2-suIIdVUTrnry-76" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1420" y="460" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-15" target="ndGepi2-suIIdVUTrnry-117" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2430" y="550" />
+              <mxPoint x="2480" y="550" />
+            </Array>
+            <mxPoint x="2470" y="552" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-15" target="ndGepi2-suIIdVUTrnry-118" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-15" target="ndGepi2-suIIdVUTrnry-157" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-15" target="ndGepi2-suIIdVUTrnry-160" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-162" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-15" target="ndGepi2-suIIdVUTrnry-159" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2470.0000000000005" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-15" value="AI" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2370" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-119" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-120" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-121" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-122" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-123" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-124" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="ndGepi2-suIIdVUTrnry-125" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2060.0243902439024" y="500" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2060" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-126" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-127" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-128" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-27" target="ndGepi2-suIIdVUTrnry-129" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-27" value="Back-end" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-28" value="PW1. Team Introduction" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-29" value="PW2. Architectural Design" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-30" value="PW3. Technical Documentation" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="755" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-31" value="PW4. UI Design" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-32" value="PW5. Deployments" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-77" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-84" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-87" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-89" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-90" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-91" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-92" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-130" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="1630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-53" target="ndGepi2-suIIdVUTrnry-131" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-53" value="Web" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-95" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-96" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-97" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1490" y="500" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1500" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-98" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-99" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-100" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-102" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-103" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-104" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-105" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-107" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-109" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-110" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-111" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-112" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-113" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-114" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-115" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ndGepi2-suIIdVUTrnry-76" target="ndGepi2-suIIdVUTrnry-116" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-76" value="Mobile" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-77" value="W02. Register" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-78" value="W04. Pets List Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-79" value="W06. Appointments List Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-80" value="W08. Pets Record Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-81" value="W10. Pet Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-82" value="W12. PetOwner Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-83" value="W14. Settings Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-84" value="W16.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Change Password Page&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-85" value="W18. Get Started Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-86" value="W03. Dashboard" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-87" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;W01. Login&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-88" value="W05. PetOwners List Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-89" value="W07. Edit Appointments Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-90" value="W09.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Edit Pets Record Page&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-91" value="W11. Edit Pet Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-92" value="W13. Edit PetOwner Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-93" value="W15. Profile Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-94" value="W17. Admin Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-95" value="M01. Login" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-96" value="M02. Register" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-97" value="M03. Dashboard" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-98" value="M04. Get Started Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-99" value="M05. My Pets List Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-100" value="M06. My Pet Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-101" value="M07. Appointments Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-102" value="M08. Appointment Request Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-103" value="M09. Survey Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-104" value="M10. Add Photo Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-105" value="M11. Add Video Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-106" value="M12. AI Diagnosis Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-107" value="M13. Pet Record Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-108" value="M14. Map Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-109" value="M15. Taxi Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-110" value="M16. PetFoood Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-111" value="M17. Vet Clinique Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-112" value="M18. Settings Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-113" value="M19. Profile Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-114" value="M20. Change Password Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-115" value="M21. Adaption List" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="1720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-116" value="M22. Create Adaption Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1540" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-117" value="AI01 : Pet Detection/Classification Model" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2480" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-118" target="ndGepi2-suIIdVUTrnry-135" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-118" target="ndGepi2-suIIdVUTrnry-140" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-118" target="ndGepi2-suIIdVUTrnry-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-118" value="&lt;div&gt;AI02 : Pet Disease Detection Model&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2480" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-119" value="BE02. Pet CRUD Operations" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2100" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-120" value="BE01. Authentication Verification" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-121" value="BE03. PetOwner CRUD Operations" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-122" value="BE04. Record CRUD Operations" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2100" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-123" value="BE05. Appointment CRUD Operations" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="755" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-124" value="BE06. Email Notification (Acc. Verification)" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2100" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-125" value="BE07. AI Integration" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-126" value="&lt;div&gt;BE08.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; REST API Services&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2100" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-127" value="BE09. Appointment Notifications (to Both Sides)" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-128" value="BE10. Record Notification (to PetOwner" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2100" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-129" value="BE11. Schedule CRUD Operations" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-130" value="W19. Adoption List Page" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-131" value="W20. Config Pages??" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-132" target="ndGepi2-suIIdVUTrnry-133" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2740" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-132" target="ndGepi2-suIIdVUTrnry-144" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2740" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ndGepi2-suIIdVUTrnry-132" target="ndGepi2-suIIdVUTrnry-147" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2740" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-132" value="&lt;div&gt;MiddleWare&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-133" value="M01:&lt;div&gt;AI Management Scripts&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2820" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-135" value="&lt;div&gt;AI02.1 : Pet Image Based Disease Detection Sub-Model&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2560" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-140" value="&lt;div&gt;AI02.2 : Pet Video Based Disease Detection Sub-Model&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2560" y="815" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-141" value="&lt;div&gt;AI02.2 : Pet Survey Based Disease Detection Sub-Model&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2560" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-144" value="M02:&lt;div&gt;AI Trigger Scripts&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2820" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-147" value="M03:&lt;div&gt;Response Scripts&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2820" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-148" value="M04:&lt;div&gt;Output Formatting Scripts&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2820" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.004;entryY=0.391;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2740" y="490" as="sourcePoint" />
+            <mxPoint x="2819.5200000000004" y="829.94" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2740" y="490" />
+              <mxPoint x="2740" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-157" value="&lt;div&gt;AI03 : Model Testing, Fine Tuning&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2480" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-159" value="&lt;div&gt;AI05 : Data Pre-Processing&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2480" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ndGepi2-suIIdVUTrnry-160" value="&lt;div&gt;AI04 : Data Gathering&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2480" y="1070" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

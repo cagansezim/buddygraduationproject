@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientVet.cshtml";
+    ViewBag.Title = "Appointments";
+}
+<!-- Appointments Section -->
+<section id="appointments" class="section">
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+            <!-- Calendar Column -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-white text-center">
+                        <h5 class="mb-0">Thu, Apr 13</h5>
+                        <small>2024</small>
+                    </div>
+                    <div class="card calendar-card">                        
+                        <div class="card-body p-0">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-end align-items-center gap-2">
+                        <span class="me-2">Add Appointment</span>
+                        <button class="btn btn-pink d-flex justify-content-center align-items-center rounded-circle" style="width: 40px; height: 40px;">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appointments List Column -->
+            <div class="col-md-8 col-lg-9">
+                <div class="card shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Appointments on Thursday, April 13th</h5>                        
+                    </div>
+                    <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+                        <!-- Repeatable Appointment Entry -->
+                        @for (int i = 0; i < 5; i++)
+                        {                            
+
+                            <div class="d-flex align-items-center p-3 mb-3 border rounded bg-light shadow-sm" style="min-height: 100px;">
+                                <!-- Animal Picture -->
+                                <img src="~/assets/img/pet-placeholder.jpg" alt="Pet Photo" class="rounded-circle me-3" width="70" height="70" />
+
+                                <!-- Pet Info -->
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <strong>@($"{9 + i}:00") - Buddy</strong>
+                                        
+                                    </div>
+                                    <span class="text-muted">2 years, 6.5kg, Dog<br /><em>Description: Annual vaccination and general check-up.</em></span>
+                                </div>
+
+                                <!-- Actions -->
+                                <div>
+                                    <a href="#" class="btn btn-sm btn-info me-1">
+                                        <i class="bi bi-file-earmark-text"></i> View Record
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary me-1">
+                                        <i class="bi bi-pencil-square"></i> 
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash"></i> 
+                                    </a>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            height: 400,
+            events: [
+                {
+                    title: 'Buddy - Checkup',
+                    start: '2025-04-15',
+                    description: '10:00 AM - Springfield Vet Clinic'
+                },
+                {
+                    title: 'Luna - Vaccination',
+                    start: '2025-04-20',
+                    description: '2:00 PM - Springfield Vet Clinic'
+                }
+            ],
+            eventClick: function (info) {
+                alert(info.event.title + '\n' + info.event.extendedProps.description);
+            }
+        });
+
+        calendar.render();
+    });
+</script>
+
+<style>
+    .btn-pink {
+        background-color: #f06292;
+        color: white;
+    }
+
+        .btn-pink:hover {
+            background-color: #e91e63;
+        }
+
+    #calendar {
+        padding: 20px;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 1.1rem;
+    }
+
+</style>

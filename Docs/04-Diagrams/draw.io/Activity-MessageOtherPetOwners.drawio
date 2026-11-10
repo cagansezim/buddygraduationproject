@@ -1,0 +1,65 @@
+<mxfile host="Electron" modified="2024-10-31T19:28:07.662Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="WEFFwhynWODonz-6IAKw" version="24.4.0" type="device">
+  <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
+    <mxGraphModel dx="1381" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="PetOwner" style="swimlane;whiteSpace=wrap;direction=east;flipV=0;flipH=0;startSize=20;spacing=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="120" width="920" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-41" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="20" y="75" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-42" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="gr_Lp5FdI1iFa-vuorJp-41" parent="2" target="gr_Lp5FdI1iFa-vuorJp-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="54.5" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-43" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="80" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-44" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="gr_Lp5FdI1iFa-vuorJp-43" parent="2" target="gr_Lp5FdI1iFa-vuorJp-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-45" value="Click on My Friends on the Menu" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="230" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-46" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="gr_Lp5FdI1iFa-vuorJp-45" parent="2" target="gr_Lp5FdI1iFa-vuorJp-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="54.5" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-47" value="Click Send Message" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="384.5" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-48" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="gr_Lp5FdI1iFa-vuorJp-47" parent="2" target="gr_Lp5FdI1iFa-vuorJp-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="54.5" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-49" value="Write Message" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="544.5" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-50" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="gr_Lp5FdI1iFa-vuorJp-49" parent="2" target="gr_Lp5FdI1iFa-vuorJp-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59" y="-60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-51" value="Click Send" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="704.5" y="70" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-53" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="2">
+          <mxGeometry x="864.5" y="75" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gr_Lp5FdI1iFa-vuorJp-54" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="2" source="gr_Lp5FdI1iFa-vuorJp-51" target="gr_Lp5FdI1iFa-vuorJp-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-109.5" y="-258" as="targetPoint" />
+            <mxPoint x="-110" y="-208" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

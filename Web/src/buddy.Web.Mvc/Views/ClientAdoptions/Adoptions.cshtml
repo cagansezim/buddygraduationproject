@@ -1,0 +1,180 @@
+﻿@model Abp.Application.Services.Dto.PagedResultDto<buddy.Adoptions.Dtos.AdoptionDto>
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Adoptions";
+    // Calculate pagination
+    var pageSize = 9; // Adjust based on your backend configuration
+    var totalPages = (int)Math.Ceiling((double)Model.TotalCount / pageSize);
+    var currentPage = ViewBag.PageNumber ?? 1;
+}
+
+<!-- Page Title -->
+<div class="page-title position-relative">
+   
+    <div class="title-wrapper">
+        <h1>Adoptions</h1>
+        <p>Explore adorable pets ready for adoption.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-4 sidebar">
+            <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="filter-widget widget-item">
+                    <h3 class="widget-title">Filter Pets</h3>
+                    <button class="btn" style="background-color: var(--accent-color); color: var(--contrast-color); border-radius: 50px; padding: 10px 20px;" type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false" aria-controls="filterCollapse">
+                        Show Filters
+                    </button>
+                    <div class="collapse mt-3" id="filterCollapse">
+                        <div style="background-color: var(--surface-color); padding: 15px; border-radius: 5px; border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);">
+                            <form asp-action="Index" asp-controller="ClientAdoptions" method="get">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Sex</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sex" value="Male" id="sexMale" class="form-check-input" @(ViewBag.Sex == "Male" ? "checked" : "") />
+                                        <label for="sexMale" class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sex" value="Female" id="sexFemale" class="form-check-input" @(ViewBag.Sex == "Female" ? "checked" : "") />
+                                        <label for="sexFemale" class="form-check-label">Female</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Species</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="Species" value="Cat" id="speciesCat" class="form-check-input" @(ViewBag.Species == "Cat" ? "checked" : "") />
+                                        <label for="speciesCat" class="form-check-label">Cat</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Species" value="Dog" id="speciesDog" class="form-check-input" @(ViewBag.Species == "Dog" ? "checked" : "") />
+                                        <label for="speciesDog" class="form-check-label">Dog</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxAge" class="form-label fw-semibold" >Max Age: <span id="maxAgeValue">@(ViewBag.MaxAge ?? "240")</span> months</label>
+                                    <input type="range" name="MaxAge" id="maxAge" min="0" max="240" value="@(ViewBag.MaxAge ?? 240)" class="form-range"  oninput="document.getElementById('maxAgeValue').innerText = this.value" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="maxWeight" class="form-label fw-semibold" >Max Weight: <span id="maxWeightValue">@(ViewBag.MaxWeight ?? "100")</span> kg</label>
+                                    <input type="range" name="MaxWeight" id="maxWeight" min="0" max="100" value="@(ViewBag.MaxWeight ?? 100)" class="form-range" oninput="document.getElementById('maxWeightValue').innerText = this.value" />
+                                </div>
+                                <button type="submit" class="btn w-100 rounded-pill" style="background-color: var(--accent-color); color: var(--contrast-color);">Apply Filters</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Adoption Entities -->
+        <div class="col-lg-8 category-posts">
+            <section id="category-postst" class="category-postst section">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row gy-4">
+                        @if (Model.Items.Any())
+                        {
+                            foreach (var adoption in Model.Items)
+                            {
+                                <div class="col-lg-6">
+                                    <article>
+                                        <!-- Image -->
+                                        <div class="post-img swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    @if (adoption.Image != null && adoption.Image.Length > 0)
+                                                    {
+                                                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(adoption.Image)" class="card-img-top object-fit-cover img-fluid" alt="@adoption.PetName" style="height: 200px;" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="bg-secondary d-flex align-items-center justify-content-center img-fluid" style="height: 200px;">
+                                                            <i class="bi bi-image fs-1 text-white"></i>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+
+                                        <p class="post-category">@adoption.Species</p>
+                                        <h2 class="title">
+                                            <a href="@Url.Action("Details", "ClientAdoptions", new { id = adoption.Id })">@adoption.PetName - @(adoption.Description?.Split(' ').Take(2).Aggregate((a, b) => a + " " + b) ?? "Adoption")</a>
+                                        </h2>
+                                        <div class="pet-info" style="font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 10px;">
+                                            <p><strong>Species:</strong> @adoption.Species | <strong>Age:</strong> @adoption.Age years | <strong>Sex:</strong> @adoption.Race</p>
+                                            <p><strong>Race:</strong> @adoption.Race | <strong>Height:</strong> @adoption.Height cm | <strong>Weight:</strong> @adoption.Weight kg</p>
+                                            <p><strong>Vaccinated:</strong> @(adoption.Is_vaccinated ? "Yes" : "No")</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="post-meta">
+                                                <p class="post-author">@adoption.PetOwnerName</p>
+                                                <p class="post-date">
+                                                    <time datetime="@adoption.Created_at.ToString("yyyy-MM-dd")">@adoption.Created_at.ToString("MMM dd, yyyy")</time>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p>No adoptions available at the moment.</p>
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section id="pagination-2" class="pagination-2 section">
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index", "ClientAdoptions", new { pageNumber = currentPage > 1 ? currentPage - 1 : 1, Sex = ViewBag.Sex, Species = ViewBag.Species, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight })">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            @for (int i = 1; i <= totalPages; i++)
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "ClientAdoptions", new { pageNumber = i, Sex = ViewBag.Sex, Species = ViewBag.Species, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight })" class="@(i == currentPage ? "active" : "")">@i</a>
+                                </li>
+                            }
+                            <li>
+                                <a href="@Url.Action("Index", "ClientAdoptions", new { pageNumber = currentPage < totalPages ? currentPage + 1 : totalPages, Sex = ViewBag.Sex, Species = ViewBag.Species, MaxAge = ViewBag.MaxAge, MaxWeight = ViewBag.MaxWeight })">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize Swiper for Multiple Images -->
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swipers = document.querySelectorAll('.post-img.swiper');
+            swipers.forEach(function (swiperElement) {
+                new Swiper(swiperElement, {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                });
+            });
+        });
+    </script>
+    }

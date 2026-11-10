@@ -1,0 +1,83 @@
+﻿@model buddy.Adoptions.Dtos.CreateAdoptionDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Create New Adoption";
+}
+
+<section class="container py-5 light-background">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-4 create-card">
+                <div class="card-header text-white py-3 rounded-top" style="background-color: var(--accent-color);">
+                    <h4 class="mb-0" style="font-family: var(--heading-font); color: var(--backgorund-color);">Create New Adoption</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Create" asp-controller="ClientAdoptions" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Choose a Pet to List for Adoption</label>
+                            <div class="row g-4">
+                                @if (ViewBag.UserPets != null && ViewBag.UserPets.Count > 0)
+                                {
+                                    foreach (var pet in ViewBag.UserPets)
+                                    {
+                                        <div class="col-md-6">
+                                            <label class="pet-card card h-100 shadow-sm border-0 rounded-3 overflow-hidden d-block position-relative @(Model.PetId == pet.Id ? "border border-3" : "")" style="@(Model.PetId == pet.Id ? "border-color: var(--accent-color);" : "")">
+                                                <input type="radio" name="PetId" value="@pet.Id" class="form-check-input position-absolute top-0 end-0 m-2" style="z-index: 2;" @(Model.PetId == pet.Id ? "checked" : "") />
+                                                @if (pet.Image != null && pet.Image.Length > 0)
+                                                {
+                                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(pet.Image)" class="card-img-top object-fit-cover" style="height: 180px;" alt="@pet.Name" />
+                                                }
+                                                else
+                                                {
+                                                    <div class="bg-secondary d-flex justify-content-center align-items-center" style="height: 180px;">
+                                                        <i class="bi bi-image fs-1 text-white"></i>
+                                                    </div>
+                                                }
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title mb-1 fw-bold" style="color: var(--accent-color);">@pet.Name</h5>
+                                                    <p class="card-text small text-muted mb-0">@pet.Species - @(pet.Breed ?? "N/A")</p>
+                                                    <p class="card-text small text-muted mb-0">Age: @pet.Age years</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="alert alert-warning rounded shadow-sm mt-2">
+                                        You don’t have any pets yet. Please add one first.
+                                    </div>
+                                }
+                            </div>
+                            <span asp-validation-for="PetId" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Description</label>
+                            <textarea asp-for="Description" class="form-control rounded-pill" rows="5" placeholder="Describe the pet and why it’s being put up for adoption..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Pet Image</label>
+                            <input type="file" name="ImageFile" class="form-control" accept="image/*" />
+                            <small class="form-text text-muted rounded-pill">Upload a clear image of your pet (recommended)</small>
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <a href="@Url.Action("MyAdoptions", "ClientAdoptions")" class="btn btn-outline-secondary btn-lg rounded-pill shadow-sm me-2">Cancel</a>
+                            <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">Create New Adoption</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Optional enhancements
+        });
+    </script>
+}

@@ -1,0 +1,59 @@
+﻿@model List<buddy.Records.Dtos.RecordDto>
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "My Records";
+}
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Records</h2>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center">No records found.</div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var record in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card rounded-4 shadow-sm border-0 hover-scale">
+                        <div class="card-header bg-primary text-white py-2">
+                            <h5 class="card-title mb-0">@record.Name</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Date:</strong> @record.Created_at.ToString("yyyy-MM-dd HH:mm")</p>
+                            <p><strong>Description:</strong> @record.Description</p>
+                            @if (!string.IsNullOrEmpty(record.ImageBase64))
+                            {
+                                <img src="data:image/jpeg;base64,@record.Image" class="img-fluid rounded mb-2" alt="Record Image" />
+                            }
+                            @if (!string.IsNullOrEmpty(record.VideoBase64))
+                            {
+                                <video controls class="img-fluid rounded">
+                                    <source src="data:video/mp4;base64,@record.Video" type="video/mp4">
+                                    Your browser does not support the video element.
+                                </video>
+                            }
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-end">
+                            <a asp-action="Details" asp-route-id="@record.Id" class="btn btn-outline-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+@section Scripts {
+    <script>
+        // Additional client-side scripts.
+    </script>
+}
+<style>
+    .hover-scale {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+</style>

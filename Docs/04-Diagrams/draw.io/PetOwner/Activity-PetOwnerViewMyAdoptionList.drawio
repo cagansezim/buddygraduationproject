@@ -1,0 +1,65 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="AJE1Y2iDzDdWX5tbIifA">
+    <mxGraphModel dx="1036" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ArGaxmG667eit4CroC-7-2" value="PetOwner" style="swimlane;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="160" y="150" width="530" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-3" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="10" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-3" target="ArGaxmG667eit4CroC-7-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="132" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-5" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="80" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-6" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-5" target="ArGaxmG667eit4CroC-7-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="192" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-7" value="View Dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="240" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-8" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-7" target="ArGaxmG667eit4CroC-7-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="112.00000000000011" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-9" value="Click on Adoption" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="400" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-10" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-9" target="ArGaxmG667eit4CroC-7-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140.5" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-11" value="Click on My Adoption List" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="400" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-12" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-11" target="ArGaxmG667eit4CroC-7-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="442" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-13" value="View My Adoption List" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="240" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-14" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="ArGaxmG667eit4CroC-7-2">
+          <mxGeometry x="170" y="115" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ArGaxmG667eit4CroC-7-15" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" parent="ArGaxmG667eit4CroC-7-2" source="ArGaxmG667eit4CroC-7-13" target="ArGaxmG667eit4CroC-7-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="190" as="targetPoint" />
+            <mxPoint x="250" y="190" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,119 @@
+<mxfile host="Electron" modified="2024-11-01T21:33:14.208Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="RmxwjVuUIy67JkPtNGtt" version="24.4.0" type="device">
+  <diagram name="Page-1" id="F1vDKjPgdfIqO4sdZeUk">
+    <mxGraphModel dx="715" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-1" value="PetOwner" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
+          <mxGeometry x="260" y="128" width="400" height="462" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-2" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="105" y="42" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-2" target="UFOZyg1kIlOoNRPUu4D8-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="132" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-4" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="60" y="92" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-5" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-4" target="UFOZyg1kIlOoNRPUu4D8-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="192" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-6" value="See Dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="205.5" y="92" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-7" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-6" target="UFOZyg1kIlOoNRPUu4D8-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="282" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="266" y="152" />
+              <mxPoint x="266" y="152" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-8" value="Click Menu" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="210" y="152" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-8" target="UFOZyg1kIlOoNRPUu4D8-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="129.5" y="372" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-10" value="Click Adoption" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="60" y="152" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-11" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-10" target="UFOZyg1kIlOoNRPUu4D8-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140.5" y="332" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="120.5" y="242" />
+              <mxPoint x="120.5" y="242" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-12" value="Click My Adoptions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="60" y="222" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-13" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-12" target="UFOZyg1kIlOoNRPUu4D8-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="432" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-14" value="Click Remove Pet Icon" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="210" y="222" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-16" value="Click Confirm" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="210" y="292" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-24" value="Display Confirmation Question" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="430" y="222" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-20" value="Delete Pet from List" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="430" y="342" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-21" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-20" target="UFOZyg1kIlOoNRPUu4D8-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.5" y="712" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="UFOZyg1kIlOoNRPUu4D8-1" vertex="1">
+          <mxGeometry x="475" y="412" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-25" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-24" target="UFOZyg1kIlOoNRPUu4D8-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="332" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="312" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-14" target="UFOZyg1kIlOoNRPUu4D8-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="472" as="targetPoint" />
+            <mxPoint x="330" y="432" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="380" y="242" />
+              <mxPoint x="380" y="242" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-23" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="UFOZyg1kIlOoNRPUu4D8-1" source="UFOZyg1kIlOoNRPUu4D8-16" target="UFOZyg1kIlOoNRPUu4D8-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-116.5" y="582" as="targetPoint" />
+            <mxPoint x="-56.5" y="502" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="270" y="362" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UFOZyg1kIlOoNRPUu4D8-19" value="System" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
+          <mxGeometry x="660" y="128" width="220" height="462" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

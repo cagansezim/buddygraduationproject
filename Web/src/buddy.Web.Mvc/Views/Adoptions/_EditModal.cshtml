@@ -1,0 +1,69 @@
+﻿@model buddy.Adoptions.Dtos.AdoptionDto
+
+<div class="modal fade" id="AdoptionEditModal" tabindex="-1" role="dialog" aria-labelledby="AdoptionEditModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AdoptionEditModalLabel">@L("Edit Adoption")</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="AdoptionEditForm" asp-action="Edit" asp-controller="Adoptions" class="form-horizontal">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-body">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="form-group row required">
+                        <label class="col-md-3 col-form-label" for="PetId">@L("Pet ID")</label>
+                        <div class="col-md-9">
+                            <input id="PetId" asp-for="PetId" type="number" class="form-control" placeholder="Enter the Pet ID" required />
+                            <small class="form-text text-muted">@L("Please provide the updated Pet ID if necessary.")</small>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Description">@L("Description")</label>
+                        <div class="col-md-9">
+                            <textarea id="Description" asp-for="Description" class="form-control" placeholder="Enter the updated description of the pet's adoption case..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Image">@L("Update Pet Image (optional)")</label>
+                        <div class="col-md-9">
+                            <input id="Image" type="file" name="Image" class="form-control" />
+                            <small class="form-text text-muted">@L("Optional: Upload a new image of the pet, if applicable.")</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group row required">
+                        <label class="col-md-3 col-form-label" for="PetOwnerId">@L("Pet Owner ID")</label>
+                        <div class="col-md-9">
+                            <input id="PetOwnerId" asp-for="PetOwnerId" type="number" class="form-control" placeholder="Enter the updated Pet Owner's ID" required />
+                            <small class="form-text text-muted">@L("Please provide the pet owner's ID.")</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@L("Cancel")</button>
+                    <button type="submit" class="btn btn-primary">@L("Save Changes")</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <environment names="Development">
+        <script src="~/view-resources/views/adoptions/EditModal.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/view-resources/views/adoptions/EditModal.min.js" asp-append-version="true"></script>
+    </environment>
+}

@@ -1,0 +1,80 @@
+﻿@model buddy.Pets.Dtos.PetDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Edit Pet";
+}
+
+<section class="container py-5 light-background">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-4 create-card">
+                <div class="card-header text-white py-3 rounded-top" style="background-color: var(--accent-color);">
+                    <h4 class="mb-0" style="font-family: var(--heading-font); color: var(--backgorund-color);">Edit Pet</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit" asp-controller="ClientPets" method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="Name" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Name</label>
+                                <input asp-for="Name" class="form-control rounded-pill" placeholder="Pet Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Species" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Species</label>
+                                <input asp-for="Species" class="form-control rounded-pill" placeholder="e.g. Dog, Cat" />
+                                <span asp-validation-for="Species" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Breed" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Breed</label>
+                                <input asp-for="Breed" class="form-control rounded-pill" placeholder="e.g. Labrador" />
+                                <span asp-validation-for="Breed" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Sex" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Sex</label>
+                                <select asp-for="Sex" class="form-select rounded-pill">
+                                    <option value="">--Not Selected</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                </select>
+                                <span asp-validation-for="Sex" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="Age" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Age (years)</label>
+                                <input asp-for="Age" class="form-control rounded-pill" type="number" min="0" />
+                                <span asp-validation-for="Age" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="Height" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Height (cm)</label>
+                                <input asp-for="Height" class="form-control rounded-pill" type="number" min="0" />
+                                <span asp-validation-for="Height" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="Weight" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Weight (kg)</label>
+                                <input asp-for="Weight" class="form-control rounded-pill" type="number" min="0" />
+                                <span asp-validation-for="Weight" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="IsVaccinated" class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Vaccinated</label>
+                                <select asp-for="IsVaccinated" class="form-select rounded-pill">
+                                    <option value="">--Not Selected</option>
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                </select>
+                                <span asp-validation-for="IsVaccinated" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" style="color: var(--default-color); font-family: var(--default-font);">Pet Image</label>
+                                <input type="file" name="ImageFile" class="form-control" accept="image/*" />
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

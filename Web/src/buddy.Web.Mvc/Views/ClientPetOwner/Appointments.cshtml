@@ -1,0 +1,46 @@
+﻿@{
+      Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Dashboard";
+    ViewBag.BodyClass = "dashboard-page";
+}
+
+<!-- Page Title -->
+<div class="page-title">
+    <div class="title-wrapper">
+        <h1>Appointments</h1>
+        <p>Manage your veterinary appointments.</p>
+    </div>
+</div>
+
+<!-- Appointments Section -->
+<section id="appointments" class="section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-end mb-4">
+                    <a href="#" class="btn btn-secondary" id="lets-start-btn"><i class="bi bi-plus-lg"></i> Schedule Appointment</a>
+                </div>
+                <div class="appointment-list">
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Checkup for Buddy</h5>
+                            <p class="card-text"><strong>Date:</strong> April 15, 2025 | <strong>Time:</strong> 10:00 AM</p>
+                            <p class="card-text"><strong>Clinic:</strong> Springfield Vet Clinic</p>
+                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Cancel</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Vaccination for Luna</h5>
+                            <p class="card-text"><strong>Date:</strong> April 20, 2025 | <strong>Time:</strong> 2:00 PM</p>
+                            <p class="card-text"><strong>Clinic:</strong> Springfield Vet Clinic</p>
+                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

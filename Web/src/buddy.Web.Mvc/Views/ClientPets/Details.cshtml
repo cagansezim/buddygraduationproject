@@ -1,0 +1,88 @@
+﻿@model buddy.Pets.Dtos.PetDto
+@{
+    Layout = "~/Views/Shared/Layout/_LayoutClientPetOwner.cshtml";
+    ViewBag.Title = "Pet Details";
+}
+
+<main>
+<div class="container py-5">
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="title-wrapper text-center">
+            <h1>@Model.Name's Pet Details</h1>
+            <p>View details of your pet.</p>
+        </div>
+    </div>
+    <!-- Back Button -->
+    <div class="text-start mb-4">
+        <a href="@Url.Action("Index", "ClientPets")" class="btn btn-secondary btn-lg rounded-pill shadow-sm" id="lets-start-btn" title="Back to My Pets">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </div>
+
+        <div class="card shadow-lg border-0 rounded-3 overflow-hidden position-relative">
+            <div class="row g-0">
+                <!-- Left: Image Display -->
+                <div class="col-md-6">
+                    <div class="card-img-container">
+                        @if (Model.Image != null && Model.Image.Length > 0)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Image)" class="img-fluid rounded-start" alt="@Model.Name" />
+                        }
+                        else
+                        {
+                            <div class="bg-secondary d-flex justify-content-center align-items-center">
+                                <i class="bi bi-image fs-1 text-white"></i>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <!-- Right: Pet Information -->
+                <div class="col-md-6 position-relative">
+                    <div class="card-body p-4">
+                        <p class="text-muted mb-3">@Model.Species • @(Model.Breed ?? "N/A")</p>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <small class="text-muted d-block">Name</small>
+                                <span class="fw-bold">@Model.Name  </span>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted d-block">Age</small>
+                                <span class="fw-bold">@Model.Age years</span>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted d-block">Weight</small>
+                                <span class="fw-bold">@Model.Weight kg</span>
+                            </div>
+                            <div class="col-6 mt-2">
+                                <small class="text-muted d-block">Height</small>
+                                <span class="fw-bold">@Model.Height cm</span>
+                            </div>
+                            <div class="col-6 mt-2">
+                                <small class="text-muted d-block">Vaccinated</small>
+                                <span class="fw-bold">@(Model.IsVaccinated ? "Yes" : "No")</span>
+                            </div>
+                            <div class="col-6 mt-2">
+                                <small class="text-muted d-block">Sex</small>
+                                <span class="fw-bold">@(Model.Sex ?? "N/A")</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Edit and Delete Buttons -->
+                    <div class="pet-actions position-absolute top-0 end-0 mt-2 me-2">
+                        <a href="@Url.Action("Edit", "ClientPets", new { id = Model.Id })" class="btn me-1 rounded-pill" id="edit-delete-btn">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <form asp-action="Delete" asp-controller="ClientPets" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete @Model.Name\'s listing?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@Model.Id" />
+                            <button type="submit" class="btn rounded-pill" id="edit-delete-btn">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- /row g-0 -->
+        </div><!-- /card -->
+</div><!-- /container -->
+</main>

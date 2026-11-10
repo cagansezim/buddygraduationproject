@@ -1,0 +1,87 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="PZ24TRFGCJgLNoZ7LiL2">
+    <mxGraphModel dx="1514" dy="1006" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3vLBQMicith6qnzhkrDY-24" value="Admin" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
+          <mxGeometry x="210" y="60" width="650" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-25" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="10" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-25" target="3vLBQMicith6qnzhkrDY-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115.5" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-27" value="Login" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="70" y="35" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-28" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-27" target="3vLBQMicith6qnzhkrDY-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115.5" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-29" value="See Dashboard" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="220" y="35" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-30" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-29" target="3vLBQMicith6qnzhkrDY-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115.5" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-31" value="Click on Clinics" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="375" y="35" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-32" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-31" target="3vLBQMicith6qnzhkrDY-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115.5" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-33" value="Click on Add Clinic" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="520" y="35" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-34" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-33" target="3vLBQMicith6qnzhkrDY-35" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="116" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-35" value="Enter Clinic Info" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="520" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-36" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-24" source="3vLBQMicith6qnzhkrDY-35" target="3vLBQMicith6qnzhkrDY-37" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115.5" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-37" value="Click Add" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-24" vertex="1">
+          <mxGeometry x="375" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-42" value="System" style="swimlane;whiteSpace=wrap;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="860" y="60" width="150" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-60" value="Save Clinic to Database" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-42" vertex="1">
+          <mxGeometry x="15" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-61" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="3vLBQMicith6qnzhkrDY-42" source="3vLBQMicith6qnzhkrDY-60" target="3vLBQMicith6qnzhkrDY-62" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-62" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="3vLBQMicith6qnzhkrDY-42" vertex="1">
+          <mxGeometry x="60" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3vLBQMicith6qnzhkrDY-38" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="1" source="3vLBQMicith6qnzhkrDY-37" target="3vLBQMicith6qnzhkrDY-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325.5" y="313" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="645" y="220" />
+              <mxPoint x="935" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
